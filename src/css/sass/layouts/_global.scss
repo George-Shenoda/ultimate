@@ -13,5 +13,8 @@
         min-height: 100%;
         transition: 0.3s;
         will-change: width;
+        &.no-sidebar{
+            width: 100%;
+        }
     }
 }
