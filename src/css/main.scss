@@ -1,7 +1,5 @@
-@import "./sass/variables/colors";
-
-@import "./sass/layouts/global";
-@import "./sass/layouts/sidebar";
-@import "./sass/layouts/header";
+@use "./sass/layouts/global";
+@use "./sass/layouts/sidebar";
+@use "./sass/layouts/header";
 
 @import "./libs/normalize.css";

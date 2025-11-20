@@ -1,9 +1,23 @@
+@use "../variables/colors" as *;
+
 .page{
     .content-area{
         header{
             background-color: $header;
+            padding: 1.25rem;
             .toggle-sidebar{
                 cursor: pointer;
+            }
+            .notifications{
+                display: inline-block;
+                margin-left: 20px;
+                cursor: pointer;
+                ul.dropdown-menu{
+                    min-width: 500px;
+                }
+                ul.show{
+                    transform: translate(315px, 50px) !important;
+                }
             }
         }
     }

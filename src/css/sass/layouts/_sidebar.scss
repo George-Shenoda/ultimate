@@ -1,16 +1,92 @@
+@use "../variables/colors" as *;
+
 .page {
     .sidebar {
-        width: 250px;
+        width: 15.625rem;
         position: fixed;
         top: 0;
         left: 0;
         height: 100%;
         background-color: $sidebar;
         color: white;
-        padding: 15px;
+        padding: 1rem;
         transition: 0.3s;
-        &.no-sidebar{
-            left: -250px;
+        &.no-sidebar {
+            left: -15.625rem;
+        }
+        .logo-area {
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .links-area {
+            li {
+                a {
+                    text-decoration: none;
+                    color: #ccc;
+                    padding: 0.625rem 1.25rem;
+                    display: block;
+                    transition: 0.3s;
+                    &:hover {
+                        color: white;
+                    }
+                }
+            }
+            > li {
+                > a {
+                    color: #fff;
+                    position: relative;
+                    &::before {
+                        content: "";
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-60%);
+                        border: 0.125rem solid #fff;
+                        width: 0.625rem;
+                        height: 0.625rem;
+                        transition: 0.3s;
+                    }
+                    &:hover {
+                        padding-left: 1.875rem;
+                    }
+                }
+            }
+            .fa-angle-right {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: .3s;
+                &.down{
+                    transform: rotate(90deg) translateX(-50%);
+                }
+            }
+            .child-links {
+                max-height: 0;
+                overflow: hidden;
+                transition: 0.3s ease;
+                &.show {
+                    max-height: 32rem;
+                }
+                a {
+                    position: relative;
+                    &::before {
+                        content: "";
+                        background-color: #666;
+                        position: absolute;
+                        left: 0.2rem;
+                        top: 0;
+                        width: 0.2rem;
+                        height: 100%;
+                        transition: 0.3s;
+                    }
+                    &:hover::before {
+                        background-color: #fff;
+                    }
+                }
+            }
         }
     }
 }
