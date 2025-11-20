@@ -1,0 +1,12 @@
+-var pageTitle = 'Homepage'
+
+doctype html
+html(lang="en")
+    include pug/components/head
+    body 
+        .page.home-page
+            include pug/layouts/sidebar
+            .content-area
+                h1 #{pageTitle}
+        
+        script(type="module", src="/src/ts/main.ts") 
