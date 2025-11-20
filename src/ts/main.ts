@@ -1,3 +1,7 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap';
+
+
 let toggle_sidebar = document.querySelector("header .toggle-sidebar");
 let sidebar = document.querySelector(".sidebar") as HTMLDivElement
 let content_area = document.querySelector(".content-area") as HTMLDivElement

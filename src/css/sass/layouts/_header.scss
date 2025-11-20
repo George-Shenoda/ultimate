@@ -1,6 +1,7 @@
 .page{
     .content-area{
         header{
+            background-color: $header;
             .toggle-sidebar{
                 cursor: pointer;
             }
