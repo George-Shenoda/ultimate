@@ -14,9 +14,23 @@
                 cursor: pointer;
                 ul.dropdown-menu{
                     min-width: 500px;
-                }
-                ul.show{
-                    transform: translate(315px, 50px) !important;
+                    padding: 1.25rem;
+                    border: 0;
+                    position: relative;
+                    box-shadow: 0 0 10px #ddd;
+                    &::before{
+                        position: absolute;
+                        top: 0;
+                        left: 1.25rem;
+                        transform: translate(-65%, -100%);
+                        content: "";
+                        border-width: 0.5rem;
+                        border-style: solid;
+                        border-color: transparent transparent blue transparent;
+                    }
+                    &.show{
+                        transform: translate(315px, 60px) !important;
+                    }
                 }
             }
         }
